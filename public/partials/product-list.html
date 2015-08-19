@@ -1,0 +1,125 @@
+     <div class="row" ng-controller="ProductListCtrl">
+         <div class="col s12 m12 l3">
+
+    <div class="card-panel">
+      
+      <div class="collection hide-on-med-and-down">
+        <div class="collection-item collection-header">
+          <h4 class="fill">
+             Category 
+             <i class="material-icons left" style="font-size:34px; margin-top:5px;"> assignment</i>
+          </h4>
+        </div>
+        <a ng-repeat="category in categories" href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}
+          <span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span>
+        </a>
+        
+      </div>
+      
+      <div class="collection show-on-medium-and-down hide-on-med-and-up" style="border:0px">
+      
+        <a href=""  class="collection-item collection-header" ng-click="showMobile()"><i class="fill material-icons " style="font-size:34px;">reorder</i></a>
+
+
+        <a ng-repeat="category in categories"  ng-class="{hide:!mobile}"  href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}<span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span></a>
+      </div>
+    </div>
+
+
+                    </div>
+            <div class="col s12 m12 l9">
+                <div class="row">
+                   
+                    <div class="col s12 m12 l12" >
+                        <div class="card-panel">
+
+                        <h4 class="fill"><i class="small material-icons left" style="font-size:34px;">dashboard</i>Products</h4>
+                        </div>
+                        <div class="card-panel">
+                        <h4 class="fill"><i class="small material-icons left" style="font-size:34px;">search</i>Filter</h4>
+                          <form action="#">
+                              <p>Filtering for: <span class="fill">{{filter}} GPB </span> <span ng-if="filter>=100">(as no filtered)</span> </p>
+                              <p class="range-field">
+                                <input ng-change="filterData()" ng-model="filter" type="range" id="test5" min="0" max="100" />
+                              </p>
+                          </form>
+                        </div>
+                       
+
+                            <div ng-if="products"class="row" >
+                            <div class="col s12 m4 l4" ng-repeat="product in products | filterForPrice: filter  ">
+                              <div class="card" ng-click="setProduct(product)" style="cursor:pointer" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+                                <div class="card-image"  >
+                                  
+
+                                  <div class="preloader-wrapper big active">
+                                        <div class="spinner-layer spinner-blue">
+                                          <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                          </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                          </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                          </div>
+                                        </div>
+
+                                        <div class="spinner-layer spinner-red">
+                                          <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                          </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                          </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                          </div>
+                                        </div>
+
+                                        <div class="spinner-layer spinner-yellow">
+                                          <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                          </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                          </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                          </div>
+                                        </div>
+
+                                        <div class="spinner-layer spinner-green">
+                                          <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                          </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                          </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  
+                                  <img style="border-bottom:1px solid #A2A2A2"class="responsive-img" ng-src="{{product.default_bouquet.image_urls.website_hero | noImage }}" imageonload>
+                                  
+
+
+
+                                  <span class="card-title">{{product.name}}</span>
+                                </div>
+
+                                <div class="card-content">
+                                  
+                                  <p class="flow-text" style="max-height:100px;z-index : 1;">{{product.default_bouquet.description | strLimit: 50 }}</p>
+                                  
+                                  <p  class="overlay" ng-show="hoverEdit" >
+                                  <span  class="overlay-span">
+                                  {{ product.pricings | forQuantity: '1'}} GBP
+                                  </span>
+                                  </p>
+                                </div>
+                                <div class="card-action">
+                                  <!--<a href="#">This is a link</a>-->
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>    

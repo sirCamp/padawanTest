@@ -1,0 +1,23 @@
+ body{
+            background-color: #fcfcfc;
+        }
+        
+.overlay{
+	position:absolute; z-index : 2;  background-color:black; height: 40%;width: 100%;top: 80%;left: 0px;opacity: .7;color:#ffab40;
+}
+.overlay-span{
+	font-size:1.5em; position:absolute; top:7%; left:31%;
+	color:#ffab40;
+}
+
+.card .card-title{
+	color:#ee6e73;
+}
+
+.hide{
+  display:none;
+}
+
+.fill{
+  color:#ee6e73;
+}
