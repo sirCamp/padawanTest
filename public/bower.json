@@ -8,6 +8,7 @@
   "license": "MIT",
   "homepage": "stefanocampese.xyz",
   "dependencies": {
-    "angular-ui-notification": "~0.0.12"
+    "angular-ui-notification": "~0.0.12",
+    "angular-materialize": "*"
   }
 }
