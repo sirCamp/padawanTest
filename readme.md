@@ -18,6 +18,7 @@ Used Framework:
 + [Laravel 5.1](http://laravel.com/docs/5.1/releases)
 + [Angular 1.4](https://angularjs.org/)
 + [MaterializeCSS 0.97](http://materializecss.com/)
++ [Goolge Material Icons](https://www.google.com/design/icons/)
 
 Laravel Package
 + [sirCamp/Response (mine)](https://github.com/sirCamp/response)
