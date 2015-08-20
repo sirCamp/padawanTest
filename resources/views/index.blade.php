@@ -24,7 +24,7 @@
                 <div class="nav-wrapper blue darken-3">
                     
                     
-                    <a href="#!" class="brand-logo">{{$titleApp}}</a>
+                    <a href="/#/" class="brand-logo">{{$titleApp}}</a>
                     
 
                     <ul class="right hide-on-med-and-down">
@@ -80,6 +80,7 @@
     <script type="text/javascript" src="js/core/angular-resource.min.js"></script>
     <script type="text/javascript" src="js/core/angular-materialize.js"></script>
     <script type="text/javascript" src="js/core/angular-animate.js"></script>
+    <script type="text/javascript" src="js/core/angular-touch.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
 
     

@@ -7,10 +7,10 @@
         <div class="collection-item collection-header">
           <h4 class="fill">
              Category 
-             <i class="material-icons left" style="font-size:34px; margin-top:5px;"> assignment</i>
+             <i class="material-icons left" style="font-size:34px;"> assignment</i>
           </h4>
         </div>
-        <a ng-repeat="category in categories" href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}
+        <a ng-repeat="category in categories" href="/#/products/{{category.id}}" ng-class="{'active':category.id==settedCategory}" class="collection-item blue-text text-darken-3">{{category.name}}
           <span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span>
         </a>
         
@@ -21,7 +21,9 @@
         <a href=""  class="collection-item collection-header" ng-click="showMobile()"><i class="fill material-icons " style="font-size:34px;">reorder</i></a>
 
 
-        <a ng-repeat="category in categories"  ng-class="{hide:!mobile}"  href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}<span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span></a>
+        <a ng-repeat="category in categories"  ng-class="{hide:!mobile,'active':category.id==settedCategory}"  href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}
+          <span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span>
+        </a>
       </div>
     </div>
 
@@ -35,19 +37,20 @@
 
                         <h4 class="fill"><i class="small material-icons left" style="font-size:34px;">dashboard</i>Products</h4>
                         </div>
-                        <div class="card-panel">
+                        
+                        <div ng-if="products" class="card-panel">
                         <h4 class="fill"><i class="small material-icons left" style="font-size:34px;">search</i>Filter</h4>
                           <form action="#">
                               <p>Filtering for: <span class="fill">{{filter}} GPB </span> <span ng-if="filter>=100">(as no filtered)</span> </p>
                               <p class="range-field">
-                                <input ng-change="filterData()" ng-model="filter" type="range" id="test5" min="0" max="100" />
+                                <input ng-change="filterData(filter)" ng-model="filter" type="range" id="test5" min="0" max="100" />
                               </p>
                           </form>
                         </div>
                        
 
                             <div ng-if="products"class="row" >
-                            <div class="col s12 m4 l4" ng-repeat="product in products | filterForPrice: filter  ">
+                            <div class="col s12 m4 l4" ng-repeat="product in products ">
                               <div class="card" ng-click="setProduct(product)" style="cursor:pointer" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
                                 <div class="card-image"  >
                                   
@@ -113,7 +116,7 @@
                                   </p>
                                 </div>
                                 <div class="card-action">
-                                  <!--<a href="#">This is a link</a>-->
+                                  
                                 </div>
                               </div>
                             </div>

@@ -14,7 +14,7 @@
                                                      
                             <div class="show-on-large hide-on-med-and-down">
                               <div class="col s12 m12 l3" style="margin-bottom:15px; margin-top:15px;">
-                                  <img  class="responsive-img" ng-src="{{product.default_bouquet.image_urls.website_main | noImage:1}}" >
+                                  <img materialboxed class="materialboxed responsive-img" ng-src="{{product.default_bouquet.image_urls.website_main | noImage:1}}" >
                 
                               </div>
                               <div class="col s12 s12 l9">
@@ -51,7 +51,7 @@
                                 <div class="">
                                   <ul>
                                     <li style="margin-bottom:10px;">Category:  <i style="color: #ee6e73" class="material-icons left">label</i>
-                                      <span style="color: #ee6e73">{{category[0].name}}</span>
+                                      <span style="color: #ee6e73">{{category.name}}</span>
                                     </li>
                                     <li style="margin-bottom:10px;">Weight :<i style="color: #ee6e73" class="material-icons left">info_outline</i>
                                     <span style="color: #ee6e73">{{product.weight}}</span>
@@ -70,7 +70,7 @@
                               
                             </div>
                             <div class="col s12 m12 l3" style="margin-bottom:15px; margin-top:15px;">
-                                  <img  class="responsive-img" ng-src="{{product.default_bouquet.image_urls.website_main | noImage:1}}" >
+                                  <img materialboxed class="materialboxed responsive-img" ng-src="{{product.default_bouquet.image_urls.website_main | noImage:1}}" >
                 
                               </div>
                           </div>
@@ -79,7 +79,7 @@
                           </div>
                           <div class="card-panel col s12">
                             <h4 class="fill">Description</h4>
-                             <blockquote>
+                             <blockquote class="flow-text" >
                               {{product.default_bouquet.long_description}}
                              </blockquote>
                           </div>
@@ -97,7 +97,7 @@
                           
                               <li ng-repeat="image in product.default_bouquet.image_urls.website_carousel">  
                               
-                                  <img src="{{image}}"> <!-- random image -->
+                                  <img src="{{image | noImage}}"> <!-- random image -->
                                   <div class="caption left-align">
                                       <h5 class="light fill">{{product.name}}</h5>
                                   </div>
@@ -118,7 +118,7 @@
                 Ceck this small offers only for you!
                
                   <div ng-repeat="price in product.pricings | order ">
-                    <h5>Offer {{$index}}</h5>
+                    <h5 class="blue-text text-darken-3">Offer {{$index +1}}</h5>
                     <ul>
                     <li><strong>Quantity:</strong> <span style="color: #ee6e73">{{price.quantity}}</span></li>
                     <li><strong>Amount:</strong> <span style="color: #ee6e73">{{price.amount}}</span></li>

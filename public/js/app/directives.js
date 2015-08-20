@@ -31,10 +31,22 @@ productDirective.directive("materialSlider", ["$timeout", function($timeout){
                 restrict: 'A',
                 link: function(scope, element, attrs) {
                     element.addClass("slider");
-                    window.c = element;
-                    console.log('f')
+
                     $timeout(function(){
                         element.slider();
+                    });
+                   
+                }
+            };
+        }]);
+
+productDirective.directive("materialboxed", ["$timeout", function($timeout){
+            return {
+                restrict: 'A',
+                link: function(scope, element, attrs) {
+                   
+                    $timeout(function(){
+                        element.materialbox();
                     });
                    
                 }

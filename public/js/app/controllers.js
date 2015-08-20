@@ -4,17 +4,18 @@
 
 var productControllers = angular.module('productControllers', []);
 
-productControllers.controller('ProductListCtrl', ['$scope', '$rootScope','$location', '$routeParams','Category','Notification',
-  function($scope,$rootScope,$location,$routeParams,Category,Notification) {
+productControllers.controller('ProductListCtrl', ['$scope', '$rootScope','$location', '$routeParams','Category','Notification','$filter',
+  function($scope,$rootScope,$location,$routeParams,Category,Notification,$filter) {
   
   Category.findAll({},function(result){
     
-    console.debug(result.response);
+    
     $scope.categories = result.response.data.categories.collections;
   
   });
 
   $scope.products = [];
+  $scope.totalProducts = [];
   $scope.product = null;
   $scope.filter = 100;
   
@@ -27,6 +28,7 @@ productControllers.controller('ProductListCtrl', ['$scope', '$rootScope','$locat
       if(result.response.type == "success"){
 
         $scope.products = result.response.data.category.skus;
+        $scope.totalProducts = result.response.data.category.skus;
       }
       else{
         Notification.error(result.response.message);
@@ -44,8 +46,8 @@ productControllers.controller('ProductListCtrl', ['$scope', '$rootScope','$locat
     this.hoverEdit = false;
   }
 
-  $scope.filterData = function(){
-    
+  $scope.filterData = function(filter){
+    $scope.products = $filter('filterForPrice')($scope.totalProducts,filter);
   }
 
 

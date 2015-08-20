@@ -5,7 +5,8 @@ var app = angular.module('ecommerceApp',[
     'productServices',
     'productFilters',
     'productDirectives',
-    'ui-notification'
+    'ui-notification',
+    'ngTouch'
 
     ]);
 
