@@ -17,11 +17,11 @@ I've used some different frameworks and I've tried to use the latest/best techno
 Used Framework:
 + [Laravel 5.1](http://laravel.com/docs/5.1/releases)
 + [Angular 1.4](https://angularjs.org/)
-+ [MaterializeCSS 0.97](http://materializecss.com/);
++ [MaterializeCSS 0.97](http://materializecss.com/)
 
 Laravel Package
 + [sirCamp/Response (mine)](https://github.com/sirCamp/response)
-+ [Respect/Validation](https://github.com/Respect/Validation)
++ [respect/Validation](https://github.com/Respect/Validation)
 
 Angular Package
 + [Angular-Materialize](https://github.com/krescruz/angular-materialize)
