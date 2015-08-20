@@ -6,7 +6,7 @@ For this project I've decided to separate the Frontend from the Backend, and I'v
 
 ## Dependecy
 
-Before start make sure to have installed **PHP > 5.4**
+Before start make sure to have installed **PHP > 5.4** and which your **Internet connection** is OK
 
 ## What I used
 
