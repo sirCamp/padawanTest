@@ -21,8 +21,8 @@
         <a href=""  class="collection-item collection-header" ng-click="showMobile()"><i class="fill material-icons " style="font-size:34px;">reorder</i></a>
 
 
-        <a ng-repeat="category in categories"  ng-class="{hide:!mobile,'active':category.id==settedCategory}"  href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}
-          <span class="badge teal-text lighten-2-text">{{category.skus | howMany}}</span>
+        <a ng-repeat="category in categories"  ng-class="{'hide':!mobile,'active':category.id==settedCategory}"  href="/#/products/{{category.id}}" class="collection-item blue-text text-darken-3">{{category.name}}
+          <span class="custom-badge teal-text lighten-2-text" style="float:right;">{{category.skus | howMany}}</span>
         </a>
       </div>
     </div>

@@ -28,3 +28,14 @@
 .collection .collection-item.active{
 	background-color:#bbdefb;
 }
+
+.custom-badge{
+	min-width: 3rem;
+	padding: 0px 6px;
+	text-align: center;
+	font-size: 1rem;
+	line-height: inherit;
+	color: #757575;
+	box-sizing: border-box;
+	float:right;
+}
