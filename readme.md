@@ -1,7 +1,7 @@
 ## Flower Ecommerce
 
-This names i choose by me, but the project is a test for Padowan Group.
-For this poject I've separated Frontend from  Backend, and I've created a REST API in Laravel for JSON management.
+This name is self chosen, but the project is a test for Padawan Group.
+For this project I've decided to separate the Frontend from the Backend, and I've created a REST API in Laravel for the JSON management.
 
 
 ## Dependecy
@@ -12,20 +12,20 @@ Before start make sure to have installed **PHP > 5.4**
 
 This project is based on PHP, JavaScript, CSS and HTML.
 
-I've used some different framework and I've tryed to use the newest/bestest technologies in the languages.
+I've used some different frameworks and I've tried to use the latest/best technologies for this programming languages.
 
 Used Framework:
-+ Laravel 5.1
-+ Angular 1.4
-+ MaterializeCSS 0.97
++ [Laravel 5.1](http://laravel.com/docs/5.1/releases)
++ [Angular 1.4](https://angularjs.org/)
++ [MaterializeCSS 0.97](http://materializecss.com/);
 
 Laravel Package
-+ sirCamp/Response (mine)
-+ Respect/Validaor
++ [sirCamp/Response (mine)](https://github.com/sirCamp/response)
++ [Respect/Validation](https://github.com/Respect/Validation)
 
 Angular Package
-+ Angular-Materialize
-+ AngularNotification
++ [Angular-Materialize](https://github.com/krescruz/angular-materialize)
++ [Angular-UI-Notification](https://github.com/alexcrack/angular-ui-notification)
 
 ## Installation
 
