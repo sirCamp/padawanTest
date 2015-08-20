@@ -61,10 +61,10 @@ class IndexController extends Controller
             }
 
             if($category != null){
-                return response()->json(new SuccessResponse(array('category'=>$category),'Category faund'),200);
+                return response()->json(new SuccessResponse(array('category'=>$category),'Category found'),200);
             }
             else{
-                return response()->json(new DangerResponse(array('category'=>$category),'Category not faund'),200);
+                return response()->json(new DangerResponse(array('category'=>$category),'Category not found'),200);
             }
         }
         else{
@@ -105,14 +105,14 @@ class IndexController extends Controller
                 }
 
                 if($product != null){
-                    return response()->json(new SuccessResponse(array('category'=>$category, 'product'=>$product),'Category and Product faund'),200);
+                    return response()->json(new SuccessResponse(array('category'=>$category, 'product'=>$product),'Category and Product found'),200);
                 }
                 else{
-                    return response()->json(new DangerResponse(array('category'=>$category,'product'=>$product),'Product not faund'),200);
+                    return response()->json(new DangerResponse(array('category'=>$category,'product'=>$product),'Product not found'),200);
                 }
             }
             else{
-                return response()->json(new DangerResponse(array('category'=>$category,'product'=>$product),'Category and Product not faund'),200);
+                return response()->json(new DangerResponse(array('category'=>$category,'product'=>$product),'Category and Product not found'),200);
             }
         }
         else{
